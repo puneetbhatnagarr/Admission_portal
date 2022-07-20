@@ -1,0 +1,58 @@
+<%- include('../partition/header.ejs') %>
+
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1 class="alert alert-success text-center">List Of BLOG</h1>
+                    <%# Show All Data %>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Title</th>
+                                    <th>Discription</th>
+                                    <th>image</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var i=1 %>
+                                <% data.forEach((item)=>{ %>
+
+                                    <tr>
+                                        <td>
+                                            <%= i++ %>
+                                        </td>
+                                        <td>
+                                            <%= item.title %>
+                                        </td>
+                                        <td>
+                                            <%= item.discription %>
+                                        </td>
+                                        <td>
+                                            <img src="/upload/<%= item.image %>" width="50">
+                                        </td>
+                                        <td>
+                                            <a href="/blog/view/<%= item._id %>">view </a>
+                                            <a href="/blog/edit/<%= item._id %>">Edit </a>
+                                            <a href="/blog/delete/<%= item._id %>">delete </a>
+
+                                        </td>
+                                    </tr>
+                                    <%})%>  
+
+                                        
+                                        
+                            </tbody>
+                        </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <%- include('../partition/footer.ejs') %>

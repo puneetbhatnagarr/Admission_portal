@@ -1,0 +1,39 @@
+<%-include('../partition/header.ejs')%>
+<br><br>
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1>UPDATE Data</h1>
+                    <form action="/admin_college/update/<%= data1._id %>" method="post">
+                        <div class="form-group">
+                            <input type="text" name="na" class="form-control" placeholder="name" value="<%= data1.name %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="em" class="form-control" placeholder="email" value="<%= data1.mail %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="ph" class="form-control" placeholder="phone" value="<%= data1.phone %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="a" class="form-control" placeholder="address" value="<%= data1.address %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="coll" class="form-control" placeholder="college" value="<%= data1.college %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="cour" class="form-control" placeholder="course" value="<%= data1.course %>">
+                        </div>
+                      
+
+                        <div class="form-group">
+                            <button class="btn btn-primary">UPDATE</button>
+                        </div>
+                    </form>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+<%-include('../partition/footer.ejs')%>

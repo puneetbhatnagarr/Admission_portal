@@ -7,7 +7,7 @@ const upload = require('./middleware/image-middleware.js')
 const cookieParser = require('cookie-parser')
 var session = require('express-session') // message k liye 
 var flash = require('connect-flash'); // message k liye
-
+var session = require('cookie-session');
 
 app.use(session({
   secret: 'secret',

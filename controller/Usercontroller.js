@@ -1,6 +1,6 @@
 const userModel = require('../models/user.js')
-const bcrypt = require("bcrypt");
-
+// const bcrypt = require("bcrypt");
+const bycrypt = require('bcryptjs')
 class usercontroller { 
 
     static signup = async(req,res)=>{

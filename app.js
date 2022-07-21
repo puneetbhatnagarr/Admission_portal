@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+// const port = 3000
 var bodyParser = require('body-parser')
 const {connectdb} = require('./Db/connect_db.js')
 const upload = require('./middleware/image-middleware.js')
@@ -55,6 +55,8 @@ connectdb();
 // load router
 app.use('/', web)
 
+
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

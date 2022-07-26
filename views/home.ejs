@@ -1,219 +1,227 @@
-<%-include('./partition/header.ejs')%>
+<%-include('./partition/header.ejs') %>
 
-<style>
-    .photo{
-      width: 450px;
-      
-      border-radius:  100% ;
-    }
-    *{
-        padding: 0;
-        margin: 0;
-    }
-  </style>
-
+    <style>
+        .b1 {
+            background-color: white;
+        }
+    </style>
     <!-- Header Start -->
-<div class="container-fluid bg-primary px-0 px-md-5 mb-5">
-<div class="row align-items-center px-3">
-<div class="col-lg-6 text-center text-lg-left">
-    <h4 class="text-white mb-4 mt-5 mt-lg-0"> Learning Center</h4>
-    <h1 class="display-3 font-weight-bold text-white">New Step Towards Virtual Mode</h1>
-    <p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit.
-        Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
-        lorem dolore sed stet et est justo dolore.</p>
-    <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
-</div>
-<div class="col-lg-6 text-center text-lg-right">
-    <img class="img-fluid mt-5" src="img/header.png" alt="">
-</div>
-</div>
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0"> Learning Center</h4>
+                <h1 class="display-3 font-weight-bold text-white">New Step Towards Virtual Mode</h1>
+                <p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit.
+                    Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
+                    lorem dolore sed stet et est justo dolore.</p>
+                <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img class="img-fluid mt-5" src="img/header.png" alt="">
+            </div>
+        </div>
     </div>
     <!-- Header End -->
 
-<!-- name section -->
-<center>
-<button class="btn btn-outline-primary" style="height: 50px;">Welcome : <%=data.username%></button>
-</center>
-<!-- name section -->
+    <!-- name section -->
+    <center>
+        <button class="btn btn-outline-primary" style="height: 50px;">Welcome : <%=data1.username%></button>
+    </center>
+    <!-- name section -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Our Courses Offer</span></p>
+                <h1 class="mb-4"></h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100"
+                            src="https://play-lh.googleusercontent.com/y5cmaOfuNBjodN5TzXgHSHF8hQKDfwKlMuCfSytQaEMt0xDSFjjgfw-ag1c3sypkcw"
+                            alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <%if(register) {%>
+                        <a href="/user/userdisplay" class="btn btn-outline-primary mt-4 py-2 px-4">My Profile</a>
+                        <% } else{ %>
 
-    <!-- Registration Start -->
+                            <a href="/user/btech" class="btn btn-outline-primary mt-4 py-2 px-4">Register</a>
+                            <% } %>
+                </div>
 
-        <div class="container-fluid py-5">
-            <div class="container">
-            <div class="row align-items-center">
-            <div class="col-lg-5">
-            <div class="card border-0">
-            <div class="card-header bg-secondary text-center p-4">
-                <h1 class="text-white m-0">Book A Seat</h1>
-            </div>
-            <div class="card-body rounded-bottom bg-primary p-5">
-            <form action="/info1" method="post">
-            <div class="mb-3">
-            <label style="color: black;">Student Name</label>
-            <input type="text" name="n" placeholder="Enter Name" class="form-control" required>
-            </div>
-            <div class="mb-3">
-            <label style="color: black;">Email</label>
-            <input type="email" name="mail" placeholder="Enter Email" class="form-control">
-            </div>
-            <div class="mb-3">
-            <label style="color: black;">Mobile Number</label>
-            <input type="number" name="p" placeholder="Enter mobile number" class="form-control">
-            <label style="color: black;">Mobile number should be encrypted</label>
-            </div>
-            <div class="mb-3">
-            <label style="color: black;">Address</label>
-            <textarea class="form-control" name="a" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-            <label style="color: black;">Sex</label><br>
-            <input type="radio" name="g" value="male"> <span style="color: black;" >Male</span>
-            <input type="radio" name="g" value="female"><span style="color: black;" >Female</span>
-            <input type="radio" name="g" value="others"><span style="color: black;" >Others</span>
-            </div>
-            
-            <div class="mb-3">
-            <label style="color: black;">College</label> 
-            <br>
-            <select name="clg" class="form-control" required>
-            <option value="0">Select</option>
-            <option value="RJIT">RJIT</option>
-            <option value="MITS">MITS</option>
-            <option value="ITM">ITM</option>
-            <option value="AVB-IIITM">AVB-IIITM</option>
-            <option value="JIWAJI UNIVERSITY">JIWAJI UNIVERSITY</option>
-            <option value="OTHERS">OTHERS</option>
-            
-            </select>
-            </div>
-            
-            <div class="mb-3">
-            <label style="color: black;">Course</label>
-            <br>
-            <select name="course" class="form-control" required>
-            <option value="0">Select</option>
-            <option value="B.TECH">B.TECH</option>
-            <option value="BSC">BSC</option>
-            <option value="BBA">BBA</option>
-            <option value="B.COM">B.COM</option>
-            
-            <option value="M.TECH">M.TECH</option>
-            <option value="MSC">MSC</option>
-            <option value="M.COM">M.COM</option>                                                                   
-            <option value="MBA">MBA</option>
-            <option value="OTHER">OTHER</option>
-                                            
-            
-            </select>
-            </div>                                            
-            <div>
-            <input type="hidden" name="user_id" value="<%=data._id %>" >
-            <button class="btn btn-secondary btn-block border-0 py-3"  type="submit">SUBMIT</button>
-            </div>
 
-         
-             
-            </form>
-            </div>
-            </div>
-            </div>
-            <div class="col-lg-7 mb-5 mb-lg-0">
-            <p class="section-title pr-5"><span class="pr-2">My Profile</span></p>
-            <h1 class="mb-4">Self Document`</h1>
-            <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-            ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-            dolor</p>
-            <ul class="list-inline m-0">
-            <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Enroll Your Self</li>
-            <li class="py-2"><i class="fa fa-check text-success mr-3"></i>CheckIn</li>
-            <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Visit Profile</li>
-            </ul>
-            <a href="/user/userdisplay" class="btn btn-outline-primary mt-4 py-2 px-4">My Profile</a>
-            </div>
-            
-            </div>
-            </div>
-            </div>
-   
-     
 
-    <!-- Registration End -->
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="https://www.aiomteducation.com/images/partner/mtech.png"
+                            alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <%if(register1) {%>
+                        <a href="/user/userdisplay" class="btn btn-outline-primary mt-4 py-2 px-4">My Profile</a>
+                        <% } else{ %>
+                            <a href="/user/mtech" class="btn btn-outline-primary mt-4 py-2 px-4">Register</a>
+                            <% } %>
+                </div>
+
+
+
+
+
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="https://iop.liba.edu/assets/images/imba_logo.jpg" alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+
+                    <%if(register2) {%>
+                        <a href="/user/userdisplay" class="btn btn-outline-primary mt-4 py-2 px-4">My Profile</a>
+                    <% } else{ %>
+
+                        <a href="/user/mba" class="btn btn-outline-primary mt-4 py-2 px-4">Register</a>
+                    <% } %>
+                </div>
+
+
+
+
+
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100"
+                            src="https://uxwing.com/wp-content/themes/uxwing/download/18-education-school/phd.png"
+                            alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <br><br>
+                        <br><br>
+                    </div>
+                    <%if(register3) {%>
+
+                        <a href="/user/userdisplay" class="btn btn-outline-primary mt-4 py-2 px-4">My Profile</a>
+                            <% } else{ %>
+
+                                <a href="/user/phd" class="btn btn-outline-primary mt-4 py-2 px-4">Register</a>
+                    <% } %>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Team Start -->
-<div class="container-fluid pt-5">
-<div class="container">
-<div class="text-center pb-2">
-<p class="section-title px-5"><span class="px-2">Our Teachers</span></p>
-<h1 class="mb-4">Meet Our Faculty</h1>
-</div>
-<div class="row">
-<div class="col-md-6 col-lg-3 text-center team mb-5">
-<div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-<img class="img-fluid w-100" src="img/team-1.jpg" alt="" >
-<div
-class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-twitter"></i></a>
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-<h4>Julia Smith</h4>
-<i>Music Teacher</i>
-</div>
-<div class="col-md-6 col-lg-3 text-center team mb-5">
-<div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-<img class="img-fluid w-100" src="img/team-2.jpg" alt="" >
-<div
-class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-twitter"></i></a>
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-<h4>Jhon Doe</h4>
-<i>Language Teacher</i>
-</div>
-<div class="col-md-6 col-lg-3 text-center team mb-5">
-<div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-<img class="img-fluid w-100" src="img/team-3.jpg" alt="" >
-<div
-class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-twitter"></i></a>
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-<h4>Mollie Ross</h4>
-<i>Dance Teacher</i>
-</div>
-<div class="col-md-6 col-lg-3 text-center team mb-5">
-<div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-<img class="img-fluid w-100" src="img/team-4.jpg" alt="" >
-<div
-class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-twitter"></i></a>
-<a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-    href="#"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-<h4>Donald John</h4>
-<i>Art Teacher</i>
-</div>
-</div>
-</div>
-</div>
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Our Professors</span></p>
+                <h1 class="mb-4">Meet Our Faculty</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Dr.Julia Smith</h4>
+                    <i>IIT Kanpur</i>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Dr.Jhon Doe</h4>
+                    <i>IIT Delhi</i>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Mollie Ross</h4>
+                    <i>IIM Ahmedabad</i>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Dr.Donald John</h4>
+                    <i>PHD Holder</i>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Team End -->
-<%- include('./partition/footer.ejs') %>
+    <%- include('./partition/footer.ejs') %>

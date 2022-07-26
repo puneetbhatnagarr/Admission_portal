@@ -1,68 +1,74 @@
-<%-include('../partition/header.ejs')%>
-<br><br>
-<section class="login-wrap mtb-40">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="login-box">
-                    <h1>UPDATE Data</h1>
-                    <form action="/user/update/<%= data1._id %>" method="post">
-                        <div class="form-group">
-                            <label>Name</label><br>
-                            <input type="text" name="na" class="form-control" placeholder="name" value="<%= data1.name %>">
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label><br>
-                            <input type="text" name="em" class="form-control" placeholder="email" value="<%= data1.mail %>">
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label><br>
-                            <input type="text" name="ph" class="form-control" placeholder="phone" value="<%= data1.phone %>">
-                        </div>
-                        <div class="form-group">
-                            <label>Gender</label><br>
-                    
-                            <input type="radio" name="gender" class="input" value="male"
-                            <%= data1.gender=='male' ? 'checked': ''  %>
-                            
-                            > male 
-                    
-                            <input type="radio" name="gender" class="input" value="female"
-                            <%= data1.gender=='female' ? 'checked': ''  %>
-                            > female 
-                            <input type="radio" name="gender" class="input" value="others"
-                            <%= data1.gender=='others' ? 'checked': ''  %>
-                            > others
-                            
-                          </div>
-                        <div class="form-group">
-                            <label>Address</label><br>
-                            <input type="text" name="a" class="form-control" placeholder="address" value="<%= data1.address %>">
-                        </div>
-                        <div class="form-group">
-                            <label>College</label><br>
-                           <select  name="coll">
-                            
-                           <option <%= data1.college =='RJIT' ? 'selected' : ''  %>>RJIT</option>
-                           <option <%= data1.college =='MITS' ? 'selected' : ''  %>>MITS</option>
-                            <option <%= data1.college =='ITM' ? 'selected' : ''  %>>ITM</option>
-                            <option <%= data1.college =='AVB-IIITM' ? 'selected' : ''  %>>AVB-IIITM</option>
-                            <option <%= data1.college =='JIWAJI UNIVERSITY' ? 'selected' : ''  %>>JIWAJI UNIVERSITY</option>
-                            </select>
+<%-include('.. /partition/header.ejs')%>
+    <br><br>
+    <section class="login-wrap mtb-40">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="login-box">
+                        <h1>UPDATE Data</h1>
+                        <form action="/user/update/<%= data1._id %>" method="post">
+                            <div class="form-group">
+                                <label>Name</label><br>
+                                <input type="text" name="na" class="form-control" placeholder="name"
+                                    value="<%= data1.name %>">
                             </div>
-                        <div class="form-group">
-                            <label>Course</label><br>
-                            <input type="text" name="cour" class="form-control" placeholder="course" value="<%= data1.course %>">
-                        </div>
-                      
+                            <div class="form-group">
+                                <label>Email</label><br>
+                                <input type="text" name="em" class="form-control" placeholder="email"
+                                    value="<%= data1.mail %>">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label><br>
+                                <input type="text" name="ph" class="form-control" placeholder="phone"
+                                    value="<%= data1.phone %>">
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label><br>
 
-                        <div class="form-group">
-                            <button class="btn btn-outline-primary">UPDATE</button>
-                        </div>
-                    </form>
-                </div>         
+                                <input type="radio" name="gender" class="input" value="male" <%=data1.gender=='male'
+                                    ? 'checked' : '' %>
+
+                                > male
+
+                                <input type="radio" name="gender" class="input" value="female" <%=data1.gender=='female'
+                                    ? 'checked' : '' %>
+                                > female
+                                <input type="radio" name="gender" class="input" value="others" <%=data1.gender=='others'
+                                    ? 'checked' : '' %>
+                                > others
+
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label><br>
+                                <input type="text" name="a" class="form-control" placeholder="address"
+                                    value="<%= data1.address %>">
+                            </div>
+                            <div class="form-group">
+                                <label>College</label><br>
+                                <select name="coll">
+
+                                    <option <%=data1.college=='RJIT' ? 'selected' : '' %>>RJIT</option>
+                                    <option <%=data1.college=='MITS' ? 'selected' : '' %>>MITS</option>
+                                    <option <%=data1.college=='ITM' ? 'selected' : '' %>>ITM</option>
+                                    <option <%=data1.college=='AVB-IIITM' ? 'selected' : '' %>>AVB-IIITM</option>
+                                    <option <%=data1.college=='JIWAJI UNIVERSITY' ? 'selected' : '' %>>JIWAJI UNIVERSITY
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Course</label><br>
+                                <input type="text" name="cour" class="form-control" placeholder="course"
+                                    value="<%= data1.course %>">
+                            </div>
+
+
+                            <div class="form-group">
+                                <button class="btn btn-outline-primary">UPDATE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<%-include('../partition/footer.ejs')%>
+    </section>
+    <%-include('.. /partition/footer.ejs')%>

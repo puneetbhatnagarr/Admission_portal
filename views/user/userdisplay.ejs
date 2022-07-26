@@ -14,17 +14,14 @@
                 <th>NAME</th>
                 <th>EMAIL</th>
                 <th>PHONE</th>
-                <th>GENDER</th>
-                <th>ADDRESS</th>
                 <th>COLLEGE</th>
                 <th>COURSE</th>
-                <th>STATUS</th>
                 <th>ACTIONS</th>
             </tr>
         </thead>
 
         <tbody>
-            <% data1.forEach((item)=>{ %>
+            <% records.forEach((item)=>{ %>
                 <tr>
                     
                     <td>
@@ -36,22 +33,14 @@
                     <td>
                         <%= item.phone %>
                     </td>
-                    <td>
-                        <%= item.gender%>
-                    </td>
-                    <td>
-                        <%= item.address %>
-                    </td>
+                  
                     <td>
                         <%= item.college %>
                     </td>
                     <td>
                         <%= item.course %>
                     </td>
-                    <td>
-                   <%= item.status %>
-                   
-                    <td>
+             <td>
                         
                         <a class="btn btn-outline-primary" href="/user/edit/<%= item._id %>">Edit </a>
 

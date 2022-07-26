@@ -8,18 +8,18 @@
         <div class="col-lg-5">
           <div class="card border-0">
             <div class="card-header bg-secondary text-center p-4">
-              <h1 class="text-white m-0">Book A Seat</h1>
+              <h1 class="text-white m-0">PHD Form</h1>
             </div>
             <div class="card-body rounded-bottom bg-primary p-5">
               <form action="/info1" method="post">
                 <div class="mb-3">
                   <input type="hidden" name="user_id" value="<%= data1._id%>">
                   <label style="color: black;">Student Name</label>
-                  <input type="text" name="n" placeholder="Enter Name" class="form-control" required>
+                  <input type="text" value="<%= data1.username %>" name="n" placeholder="Enter Name" class="form-control" required>
                 </div>
                 <div class="mb-3">
                   <label style="color: black;">Email</label>
-                  <input type="email" name="mail" placeholder="Enter Email" class="form-control">
+                  <input type="email" value="<%= data1.email %>" name="mail" placeholder="Enter Email" class="form-control">
                 </div>
                 <div class="mb-3">
                   <label style="color: black;">Mobile Number</label>

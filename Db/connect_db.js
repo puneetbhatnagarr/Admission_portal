@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const databaseurl =
-  "mongodb+srv://puneet:puneet@cluster0.q5miz.mongodb.net/puneet?retryWrites=true&w=majority";
+  'mongodb+srv://take:take@cluster0.ukb3uie.mongodb.net/take_addmission?retryWrites=true&w=majority';
 const connectdb = () => {
   return mongoose
     .connect(databaseurl)
